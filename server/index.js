@@ -63,8 +63,8 @@ app.get('/books/:id', async (request, response) => {
         const book = await Book.findById(id);
 
         return response.status(200).json({
-            count: books.length,
-            data: books
+            count: book.length,
+            data: book
         });
 
     } catch (error) {
